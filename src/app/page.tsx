@@ -1,6 +1,12 @@
 import Image from "next/image";
-import { Add, ArrowRight } from "iconsax-react";
+import { Add, ArrowLeft, ArrowRight, ArrowUp, CallCalling, Clock } from "iconsax-react";
 import { Badge } from "../components/badge";
+import { HorizontalLine } from "../components/line";
+import { Button } from "../components/button";
+import { MostLookingForCard } from "../components/most-looking-for-card";
+import { PackageCard } from "../components/package-card";
+import { FooterBadge } from "../components/badge-footer";
+import { FooterListItems } from "../components/footer-list-itens";
 // width 1680
 // widthheight 970
 export default function Home() {
@@ -24,7 +30,7 @@ export default function Home() {
               Tire seu Visto conosco e não tenha nenhuma surpresa negativa!
             </p>
 
-            <div className="flex w-full bg-border h-[1.5px]"/>
+            <HorizontalLine/>
 
             <div className="flex flex-col w-full items-center gap-9">
               <article className="flex w-full gap-5">
@@ -38,9 +44,9 @@ export default function Home() {
                     família não ter nenhuma preocupação na sua 
                     viagem.
                   </p>
-                  <button className="px-6 py-4 bg-secondary-900 gap-3 flex items-center justify-between font-semibold text-white rounded-full">
+                  <Button type="DEFAULT">
                     Saiba mais <ArrowRight size={24} color="#FFF"/>
-                  </button>
+                  </Button>
                 </div>
 
                 <div className="mt-8 flex flex-col gap-4 h-max">
@@ -52,9 +58,9 @@ export default function Home() {
                       <p className="font-semibold text-[1.4em] text-foreground">Conheça a Bruna</p>
                       <p className="text-[1.1em] text-muted-foreground font-normal">Ver vídeo</p>
                     </article>
-                    <button type="button" className="size-9 rounded-full bg-secondary-900 grid place-items-center">
+                    <Button type="CIRCULAR_FILL">
                       <ArrowRight size={24} color="#FFF"/>
-                    </button>
+                    </Button>
                   </div>
                 </div>
 
@@ -93,10 +99,16 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-muted-background px-[60px] py-10 relative">
 
-      <section className="bg-muted-background px-[60px] py-14">
-        <p className="uppercase font-medium text-[4.3em]">Consultoria completa para <br />tirar seu visto</p>
-        <p className="uppercase text-right font-medium text-[4.3em] italic">você esta em boas mãos!</p>
+        <div className="bg-white w-max rounded-xl p-2.5 absolute bottom-12 left-96 -rotate-12">
+          <Clock size={40} color="#232323" className="shrink-0"/>
+        </div>
+        <div className="bg-white w-max rounded-xl p-4 absolute top-12 right-96 rotate-12">
+          <CallCalling size={40} color="#232323" className="shrink-0"/>
+        </div>
+        <p className="uppercase font-medium text-[4em]">Consultoria completa para <br />tirar seu visto</p>
+        <p className="uppercase text-right font-medium text-[4em] italic">você esta em boas mãos!</p>
 
       </section>
 
@@ -118,24 +130,154 @@ export default function Home() {
           
           </div>
           <article className="flex-1 flex flex-col">
-            <div>
+            <div className="border-b border-border px-3 py-5 space-y-4">
               <h1 className="text-[44px] font-medium leading-[130.8%] tracking-[-8%]">Etapa Inicial</h1>
               <p className="flex-1 text-base text-muted-foreground">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             </div>
 
-            <div>
+
+            <div className="border-b border-border px-3 py-5 space-y-4">
               <h3 className="text-[44px] font-medium leading-[130.8%] tracking-[-8%]">Processo de Entrevista</h3>
               <p className="flex items-center gap-2 text-foreground text-base font-medium"><Add size={20} color="#232323"/> Leia mais</p>
             </div>
 
-            <div>
+
+            <div className="border-b border-border px-3 py-5 space-y-4">
               <h3 className="text-[44px] font-medium leading-[130.8%] tracking-[-8%]">Processo de Entrevista</h3>
               <p className="flex items-center gap-2 text-foreground text-base font-medium"><Add size={20} color="#232323"/> Leia mais</p>
             </div>
+
+
 
           </article>
         </div>
       </section>
+
+
+      <section className="relative w-full h-max py-21 grid place-items-center">
+        <section className="w-full h-[423px] bg-[url('/images/desteny-pattern.png')] bg-center bg-cover absolute top-0 left-0"/>
+
+        <div className="flex flex-col w-max items-center mb-[60px]">
+          <Badge text="Top Destinos" />
+          <h1 className="uppercase font-medium text-[3em] leading-[120%] mt-2 mb-3">Destinos mais procurados </h1>
+          <p className="text-center text-base text-muted-foreground mb-10">Confira os destinos mais procurados por nossos clientes nos últimos meses, <br />qual seria o seu novo destino?</p>
+          <Button type="DEFAULT">
+            <p>Conheça mais</p>
+          </Button>
+        </div>
+
+
+        <figure className="flex items-center justify-center gap-5">
+          <div className="flex flex-col gap-5">
+            <MostLookingForCard image="/images/indonesia.svg" type="DEFAULT" place="Bali, Indonesia"/>
+            <MostLookingForCard image="/images/franca.svg" type="DEFAULT" place="Paris, França"/>
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <MostLookingForCard image="/images/eua.svg" type="MIDDLE" place="Nova York, Estados Unidos"/>
+            <MostLookingForCard image="/images/south-africa.svg" type="MIDDLE" place="Cidade do Cabo, Africa do Sul"/>
+          </div>
+
+
+          <div className="flex flex-col gap-5">
+            <MostLookingForCard image="/images/grecia.svg" type="DEFAULT" place="Santorini, Grecia"/>
+            <MostLookingForCard image="/images/india.svg" type="DEFAULT" place="Mumbai, India"/>
+          </div>
+        </figure>
+      </section>
+
+
+
+      <section className="flex flex-col px-[60px] py-[74px] bg-background gap-[60px]">
+
+        <aside className="flex items-end justify-between">
+          <div>
+            <Badge text="Pacotes"/>
+            <h1 className="text-[4em] leading-[120%] tracking-[-8%]">Confira nossos pacotes</h1>
+          </div>
+          <div className="flex items-center gap-5">
+            <Button type="CIRCULAR_BORDER">
+              <ArrowLeft size={24} color="#1B2543"/>
+            </Button>
+            <Button type="CIRCULAR_FILL">
+              <ArrowRight size={24} color="#FFFFFF"/>
+            </Button>
+          </div>
+
+        </aside>
+
+
+        <aside className="w-full flex gap-6">
+
+          <PackageCard package_type="Passaporte" image="/images/passaporte.svg" callForm="On-line" duration="45 dias" price="890,00"/>
+          <PackageCard package_type="Passaporte + Visto" image="/images/passaporte + visto.svg" callForm="On-line + Presencial" duration="25 dias" price="1.290,00"/>
+          <PackageCard package_type="COnsultoria Completa" image="/images/consultoria-completa.svg" callForm="Presencial Completo" duration="10 dias" price="1.890,00"/>
+
+        </aside>
+      </section>
+
+
+      <footer className="flex flex-col">
+
+        <section className="px-[60px] py-[70px] border-b border-border space-y-10">
+          <div className="flex items-center justify-between">
+            <article>
+              <h1 className="font-medium text-[4.3em] text-foreground tracking-[-8%] leading-[130.8%]">Está com alguma <br />dúvida?</h1>
+              <p className="text-muted-foreground text-xl text-left mt-3 mb-6">Entre em contato através do nosso canal direto ao cliente <br />através do botão abaixo</p>
+              <Button type="DEFAULT">
+                <p>Central de Atendimento</p>
+              </Button>
+            </article>
+
+            <div className="border-b border-foreground flex items-center justify-between gap-32">
+              <p className="text-[44px] tracking-[-6%] font-normal">Receba novidades</p>
+              <ArrowUp size={40} color="#232323" className="rotate-45"/>
+            </div>
+          </div>
+
+
+          <div className="flex items-end justify-between">
+            <article className="space-y-5">
+              <p className="text-2xl text-foreground font-semibold tracking-[-2%]">Siga em nossas redes:</p>
+              <div className="flex gap-5">
+                <FooterBadge>
+                  <p>Instagram</p>
+                </FooterBadge>
+                <FooterBadge>
+                  <p>X</p>
+                </FooterBadge>
+                <FooterBadge>
+                  <p>Facebook</p>
+                </FooterBadge>
+                <FooterBadge>
+                  <p>Youtube</p>
+                </FooterBadge>
+              </div>
+            </article>
+
+            <div className="flex justify-between gap-32">
+              <FooterListItems
+                title="Empresa"
+                items={["Home", "Quem somos", "Serviços", "Contato"]}
+              />
+              <FooterListItems
+                title="Novidades"
+                items={["Passaporte", "Visto", "Entrevista", "Polícia Federal"]}
+              />
+              <FooterListItems
+                title="Suporte"
+                items={["FAQ", "Contato", "Dúvidas Frequentes"]}
+              />
+            </div>
+          </div>
+
+        </section>
+
+        <div className="grid place-items-center px-[60px] py-7">
+          <p className="font-medium text-base">© 2025 Tirar Visto - Todos os Direitos Reservados</p>
+        </div>
+
+      </footer>
     </main>
   );
 }
