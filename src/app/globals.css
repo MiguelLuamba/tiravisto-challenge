@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #232323;
+  --muted-foreground: #8D8D8D;
+  --muted-background: #F7F7F7;
+  --primary-900: #F6C010;
+  --primary-800: #E5E3E3;
+  --border: #E5E5E5;
+  --secondary-900: #1B2543;
+  --content-width: calc(100% - 120px); /* Definindo a largura com calc */
+  --secondary-800: #282828;
+
+  --plus-jakarta: "Plus Jakarta Sans", sans-serif;
+  --inter: "Inter", Arial, Helvetica, sans-serif;
+  --gradient-primary: linear-gradient(180deg, rgba(35, 35, 35, 0) 0%, #232323 100%);
+  --gradient-secondary: linear-gradient(90deg, var(--secondary-900), var(--secondary-800));
+  --bg-dream-travel-image: url('/images/dream-travel.svg'); /* Caminho absoluto corrigido */
+}
+
+
+#dream-box-article {
+  background: linear-gradient(180deg, rgba(35, 35, 35, 0) 0%, #232323 100%);
+}
+@theme inline {
+  --bg-dream-travel-image: var(--bg-dream-travel-image);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-background: var(--muted-background);
+  --color-primary-900: var(--primary-900);
+  --color-primary-800: var(--primary-800);
+  --color-border: var(--border);
+   --content-width: var(--content-width);
+  --color-secondary-900: var(--secondary-900);
+  --color-secondary-800: var(--secondary-800);
+  --font-plus-jakarta: var(--plus-jakarta);
+  --font-inter: var(--inter);
+
+  --gradient-primary: var(--gradient-primary);
+  --gradient-secondary: var(--gradient-secondary);
+}
+
+/* @media (prefers-color-scheme: dark) { */
+  /* :root { */
+    /* --background: #232323; */
+    /* --foreground: #FFFFFF; */
+    /* --muted-foreground: #A0A0A0; */
+    /* --muted-background: #2A2A2A; */
+    /* --primary-900: #FFD700; */
+    /* --primary-800: #D3D3D3; */
+    /* --secondary-900: #3B4A7A; */
+    /* --secondary-800: #4A4A4A; */
+    /* --gradient-primary: linear-gradient(90deg, var(--primary-900), var(--primary-800)); */
+    /* --gradient-secondary: linear-gradient(90deg, var(--secondary-900), var(--secondary-800)); */
+    /* --bg-dream-travel-image: url('/images/dream-travel.svg'); Imagem para modo escuro, se aplicável */
+  /* } */
+/* } */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--inter);
+}
