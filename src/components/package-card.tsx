@@ -20,7 +20,7 @@ export function PackageCard({
   return (
     <div className="grow p-4 rounded-3xl border border-border flex flex-col gap-8">
 
-      <figure className="bg-border rounded-2xl overflow-hidden relative h-[390px] w-full">
+      <figure className="bg-border rounded-2xl overflow-hidden relative h-[250px] sm:h-[390px] w-full">
         <Image src={image} fill objectFit="cover" alt="image"/>
       </figure>
 
@@ -36,7 +36,7 @@ export function PackageCard({
 
         
         <article className="space-y-4">
-          <h1 className="text-3xl text-black font-semibold">{package_type}</h1>
+          <h1 className="text-xl lg:text-3xl text-black font-semibold">{package_type}</h1>
 
           <div className="flex items-center justify-between">
             <div>
@@ -56,8 +56,8 @@ export function PackageCard({
 
         <div className="flex justify-between items-center">
           <article>
-            <p text-muted-foreground font-normal>A partir de</p>
-            <h2 className="text-4xl text-black font-semibold">R$ {price}</h2>
+            <p className="text-muted-foreground font-normal">A partir de</p>
+            <h2 className="text-2xl lg:text-4xl text-black font-semibold">R$ {price}</h2>
           </article>
           <Button type="DEFAULT">
             <p>Contratar</p>

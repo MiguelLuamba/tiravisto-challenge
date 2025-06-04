@@ -14,7 +14,7 @@ export function MostLookingForCard({
   return (
     <div
       className={`
-        ${type === "DEFAULT" ? "w-[330px] h-72" : "size-[340px]"}
+        ${type === "DEFAULT" ? "sm:w-[330px] sm:h-72 size-[400px]" : "sm:w-[330px] sm:h-72 lg:size-[340px] size-[400px]"}
         rounded-3xl relative overflow-hidden flex items-end justify-center pb-4 group
       `}
     >
