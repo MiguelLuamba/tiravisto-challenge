@@ -18,7 +18,7 @@ export function PackageCard({
   price
 }: PackageCardProps) {
   return (
-    <div className="grow p-4 rounded-3xl border border-border flex flex-col gap-8">
+    <div className="grow p-4 rounded-3xl border border-border flex flex-col gap-8" id="pacotes-card">
 
       <figure className="bg-border rounded-2xl overflow-hidden relative h-[250px] sm:h-[390px] w-full">
         <Image src={image} fill objectFit="cover" alt="image"/>
