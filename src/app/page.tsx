@@ -14,7 +14,7 @@ export default function Home() {
       <section className="flex xl:flex-row flex-col items-start justify-between min-h-max pr-5 py-5 lg:pl-[60px] sm:pl-7 pl-4">
         <div className="xl:w-1/2 w-full">
           <nav className="flex items-center justify-between gap-1.5 lg:pr-[60px] sm:pr-7 pr-4 py-8">
-            <Image src={"/images/logo.svg"} width={152} height={42} alt="logo"/>
+            <Image src={"/images/logo.svg"} width={152} height={42} alt="logo" priority/>
             <ul className="flex items-center gap-1 font-inter font-normal text-foreground">
               <li className="font-bold mx-3 my-2.5">Home</li>
               <li className="mx-3 my-2.5 text-nowrap">Quem Somos</li>
@@ -49,7 +49,7 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-col gap-4 h-max">
                   <figure className="md:w-3xs md:h-36 rounded-2xl relative w-full h-48 overflow-hidden">
-                    <Image src={"/images/video-thumbnail.svg"} fill alt="video thumbnail" objectFit="cover" className="object-cover"/>
+                    <Image src={"/images/video-thumbnail.svg"} fill alt="video thumbnail" objectFit="cover" className="object-cover" priority/>
                   </figure>
                   <div className="flex items-center justify-between">
                     <article className="">
@@ -82,7 +82,7 @@ export default function Home() {
           </article>
         </div>
         <div className="xl:w-1/2 w-full h-[600px] lg:h-screen rounded-3xl relative overflow-hidden ">
-          <Image src={"/images/dream-travel.svg"} fill alt="image" objectFit="cover"/>
+          <Image src={"/images/dream-travel.svg"} fill alt="image" objectFit="cover" priority/>
           <div className="flex-1 h-full flex flex-col items-end justify-between relative">
             <Badge text="Tirar seu visto agora!" styles={{margin:16}}/>
 
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row items-start gap-9">
           <div className="w-full lg:w-1/2">
             <figure className="relative w-full md:h-[444px] h-[250px] overflow-hidden rounded-[26px]">
-              <Image src={"/images/family-traveling.png"} fill alt="family" className="object-fill"/>
+              <Image src={"/images/family-traveling.png"} fill alt="family" className="object-fill" priority/>
             </figure>
           
           </div>
