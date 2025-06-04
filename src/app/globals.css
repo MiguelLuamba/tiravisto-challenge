@@ -9,14 +9,13 @@
   --primary-800: #E5E3E3;
   --border: #E5E5E5;
   --secondary-900: #1B2543;
-  --content-width: calc(100% - 120px); /* Definindo a largura com calc */
+  --content-width: calc(100% - 120px);
   --secondary-800: #282828;
-
   --plus-jakarta: "Plus Jakarta Sans", sans-serif;
   --inter: "Inter", Arial, Helvetica, sans-serif;
   --gradient-primary: linear-gradient(180deg, rgba(35, 35, 35, 0) 0%, #232323 100%);
   --gradient-secondary: linear-gradient(90deg, var(--secondary-900), var(--secondary-800));
-  --bg-dream-travel-image: url('/images/dream-travel.svg'); /* Caminho absoluto corrigido */
+  --bg-dream-travel-image: url('/images/dream-travel.svg'); 
 }
 
 
@@ -41,22 +40,6 @@
   --gradient-primary: var(--gradient-primary);
   --gradient-secondary: var(--gradient-secondary);
 }
-
-/* @media (prefers-color-scheme: dark) { */
-  /* :root { */
-    /* --background: #232323; */
-    /* --foreground: #FFFFFF; */
-    /* --muted-foreground: #A0A0A0; */
-    /* --muted-background: #2A2A2A; */
-    /* --primary-900: #FFD700; */
-    /* --primary-800: #D3D3D3; */
-    /* --secondary-900: #3B4A7A; */
-    /* --secondary-800: #4A4A4A; */
-    /* --gradient-primary: linear-gradient(90deg, var(--primary-900), var(--primary-800)); */
-    /* --gradient-secondary: linear-gradient(90deg, var(--secondary-900), var(--secondary-800)); */
-    /* --bg-dream-travel-image: url('/images/dream-travel.svg'); Imagem para modo escuro, se aplicável */
-  /* } */
-/* } */
 
 body {
   background: var(--background);
